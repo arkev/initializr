@@ -10,9 +10,11 @@ textarea {
     color: #222;
 }
 
-body {
-    font-size: 1em;
-    line-height: 1.4;
+html,body {
+	margin:0;
+	padding:0;
+	height:100%; /* needed for container min-height */
+	color:#666;
 }
 
 ::-moz-selection {
@@ -157,8 +159,19 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+#container {
+	position:relative; /* needed for footer positioning*/
+	height:auto !important; /* real browsers */
+	height:100%; /* IE6: treaded as min-height*/
+	min-height:100%; /* real browsers */
+}
 
-
+.main-container{padding-bottom:8em;}
+.footer-container {
+	position:absolute;
+	width:100%;
+	bottom:0; /* stick to bottom */
+}
 
 
 
